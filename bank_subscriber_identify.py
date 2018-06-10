@@ -36,9 +36,9 @@ import time
 
 # # User-defined functions
 
-# Function    : plot histogram<br />
-# Input       : var, x_len, y_len, title, y_label, x_label = "None"<br />
-# Output      : None<br /> 
+# Function    : plot histogram
+# Input       : var, x_len, y_len, title, y_label, x_label = "None"
+# Output      : None 
 # Description : Plot the histogram of var; also saves as PNG to image folder
 
 
@@ -61,9 +61,9 @@ def plot_histogram(var, label, x_len, y_len, title, y_label, x_label = "None"):
     return
 
 
-# Function    : standardize_data<br />
-# Input       : train, test<br />
-# Output      : train, test<br /> 
+# Function    : standardize_data
+# Input       : train, test
+# Output      : train, test 
 # Description : Normalize the training and testing data
 
 
@@ -74,9 +74,9 @@ def standardize_data(train, test):
     return train, test
 
 
-# Function    : print_bold<br />
-# Input       : data<br />
-# Output      : None<br /> 
+# Function    : print_bold
+# Input       : data
+# Output      : None 
 # Description : Print the string in bold
 
 
@@ -86,9 +86,9 @@ def print_bold(data):
     return
 
 
-# Function    : plot_roc_curve<br />
-# Input       : fpr, tpr, rocauc<br />
-# Output      : None<br /> 
+# Function    : plot_roc_curve
+# Input       : fpr, tpr, rocauc
+# Output      : None 
 # Description : Plot ROC curve
 
 
@@ -105,9 +105,9 @@ def plot_roc_curve(fpr, tpr, rocauc):
     plt.show()
 
 
-# Function    : print_metrics<br />
-# Input       : title, score_train, score_test, cm, f1, cr<br />
-# Output      : None<br /> 
+# Function    : print_metrics
+# Input       : title, score_train, score_test, cm, f1, cr
+# Output      : None 
 # Description : Print the metrics of a classifier
 
 
@@ -128,9 +128,9 @@ def print_plot_metrics(title, score_train, score_test, cm, f1, cr, fpr, tpr, roc
     plot_roc_curve(fpr, tpr, rocauc)
 
 
-# Function    : display_histogram_features<br />
-# Input       : csvdata<br />
-# Output      : None<br /> 
+# Function    : display_histogram_features
+# Input       : csvdata
+# Output      : None 
 # Description : Display the histogram of all features of dataset
 
 
@@ -159,9 +159,9 @@ def display_histogram_features(csvdata):
     
 
 
-# Function    : data_cleaning<br />
-# Input       : csvdata<br />
-# Output      : csvdata<br /> 
+# Function    : data_cleaning
+# Input       : csvdata
+# Output      : csvdata 
 # Description : Clean the data of unknown and lesser important data points and features
 
 
@@ -184,9 +184,9 @@ def data_cleaning(csvdata):
     return csvdata
 
 
-# Function    : split_categorical_strings<br />
-# Input       : csvdata<br />
-# Output      : dataset<br /> 
+# Function    : split_categorical_strings
+# Input       : csvdata
+# Output      : dataset 
 # Description : Create dataset by spliting categorical strings
 
 
@@ -233,9 +233,9 @@ def split_categorical_strings(csvdata):
     return dataset
 
 
-# Function    : extract_label_from_dataset<br />
-# Input       : csvdata<br />
-# Output      : label<br /> 
+# Function    : extract_label_from_dataset
+# Input       : csvdata
+# Output      : label 
 # Description : Extract the labels from the dataset
 
 
@@ -247,9 +247,9 @@ def extract_label_from_dataset(csvdata):
     return label
 
 
-# Function    : balanced_test_sample<br />
-# Input       : features, label, subsample_size<br />
-# Output      : X_train, X_test, y_train, y_test<br /> 
+# Function    : balanced_test_sample
+# Input       : features, label, subsample_size
+# Output      : X_train, X_test, y_train, y_test 
 # Description : Create balanced test data
 
 
@@ -285,7 +285,7 @@ def balanced_test_sample(features, label, subsample_size = 1.0):
     
 
 
-# Class: classifier_info<br />
+# Class: classifier_info
 # Description : The classifier_info class has all methods to classify and print metrics 
 
 
@@ -335,7 +335,7 @@ class classifier_info:
 
 
 
-csvdata = pd.read_csv('bank-additional.csv')
+csvdata = pd.read_csv('data/bank-additional.csv')
 csvdata.rename(columns={'emp.var.rate': 'emp_var_rate', 'cons.price.idx': 'cons_price_idx', 'cons.conf.idx' : 'cons_conf_idx', 'nr.employed' : 'nr_employed'}, inplace=True)
 orig_csvdata = csvdata
 csvdata.head()
