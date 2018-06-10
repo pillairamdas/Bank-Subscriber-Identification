@@ -12,15 +12,24 @@ These instructions will get you a copy of the project up and running on your loc
 The following python packages are required for running the software.
 
 [pandas](https://pandas.pydata.org/)
+
 [numpy](http://www.numpy.org/)
+
 [seaborn](https://seaborn.pydata.org/)
+
 [matplotlib](https://matplotlib.org/)
+
 [sklearn](http://scikit-learn.org/stable/index.html)
+
 [imblearn](http://contrib.scikit-learn.org/imbalanced-learn/stable/api.html)
+
 [prettytable](https://pypi.org/project/PrettyTable/)
+
 [time](https://docs.python.org/2/library/time.html)
+
 
 ## Built With
 
 [Jupyter-notebook](http://jupyter.org/) - A web-based notebook environment for interactive computing.
+
 [Anaconda Python Cloud](https://anaconda.org/anaconda/python) - A free and open source distribution of the Python and R programming languages for data science and machine learning related applications.
